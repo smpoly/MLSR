@@ -1,0 +1,930 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Baker%
+\ \BBA {} Yacef%
+}{%
+Baker%
+\ \BBA {} Yacef%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+baker2009state}
+\APACinsertmetastar {%
+baker2009state}%
+\begin{APACrefauthors}%
+Baker, R\BPBI S.%
+\BCBT {}\ \BBA {} Yacef, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The state of educational data mining in 2009: A review
+  and future visions} {The state of educational data mining in 2009: A review
+  and future visions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{JEDM-Journal of Educational Data Mining}{1}{1}{3--17}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Beasley%
+}{%
+Beasley%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+beasley2012isolation}
+\APACinsertmetastar {%
+beasley2012isolation}%
+\begin{APACrefauthors}%
+Beasley, L\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Isolation number versus Boolean rank} {Isolation number
+  versus boolean rank}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Linear Algebra and its
+  Applications}{436}{9}{3469--3474}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chiu%
+}{%
+Chiu%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+chiu2013statistical}
+\APACinsertmetastar {%
+chiu2013statistical}%
+\begin{APACrefauthors}%
+Chiu, C\BHBI Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Statistical Refinement of the Q-matrix in Cognitive
+  Diagnosis} {Statistical refinement of the q-matrix in cognitive
+  diagnosis}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Applied Psychological Measurement}{37}{8}{598--618}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chiu%
+\ \BBA {} Douglas%
+}{%
+Chiu%
+\ \BBA {} Douglas%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+chiu2013nonparametric}
+\APACinsertmetastar {%
+chiu2013nonparametric}%
+\begin{APACrefauthors}%
+Chiu, C\BHBI Y.%
+\BCBT {}\ \BBA {} Douglas, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A nonparametric approach to cognitive diagnosis by
+  proximity to ideal response patterns} {A nonparametric approach to cognitive
+  diagnosis by proximity to ideal response patterns}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Classification}{30}{2}{225--250}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+De~La~Torre%
+}{%
+De~La~Torre%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+de2008empirically}
+\APACinsertmetastar {%
+de2008empirically}%
+\begin{APACrefauthors}%
+De~La~Torre, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {An Empirically Based Method of Q-Matrix Validation for
+  the DINA Model: Development and Applications} {An empirically based method of
+  q-matrix validation for the dina model: Development and applications}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of educational measurement}{45}{4}{343--362}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+De~La~Torre%
+}{%
+De~La~Torre%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+de2009dina}
+\APACinsertmetastar {%
+de2009dina}%
+\begin{APACrefauthors}%
+De~La~Torre, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {DINA model and parameter estimation: A didactic} {Dina
+  model and parameter estimation: A didactic}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Educational and Behavioral
+  Statistics}{34}{1}{115--130}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+De~La~Torre%
+}{%
+De~La~Torre%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+de2011generalized}
+\APACinsertmetastar {%
+de2011generalized}%
+\begin{APACrefauthors}%
+De~La~Torre, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The generalized DINA model framework} {The generalized
+  dina model framework}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{76}{2}{179--199}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+M.~Desmarais%
+, Beheshti%
+\BCBL {}\ \BBA {} Xu%
+}{%
+M.~Desmarais%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+desmarais2014refinement}
+\APACinsertmetastar {%
+desmarais2014refinement}%
+\begin{APACrefauthors}%
+Desmarais, M.%
+, Beheshti, B.%
+\BCBL {}\ \BBA {} Xu, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The refinement of a Q-matrix: Assessing methods to
+  validate tasks to skills mapping} {The refinement of a q-matrix: Assessing
+  methods to validate tasks to skills mapping}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Educational Data Mining 2014.} {Educational data mining
+  2014.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+M\BPBI C.~Desmarais%
+}{%
+M\BPBI C.~Desmarais%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+desmarais2012mapping}
+\APACinsertmetastar {%
+desmarais2012mapping}%
+\begin{APACrefauthors}%
+Desmarais, M\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Mapping question items to skills with non-negative
+  matrix factorization} {Mapping question items to skills with non-negative
+  matrix factorization}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{ACM SIGKDD Explorations Newsletter}{13}{2}{30--36}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+M\BPBI C.~Desmarais%
+, Xu%
+\BCBL {}\ \BBA {} Beheshti%
+}{%
+M\BPBI C.~Desmarais%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+desmarais2015combining}
+\APACinsertmetastar {%
+desmarais2015combining}%
+\begin{APACrefauthors}%
+Desmarais, M\BPBI C.%
+, Xu, P.%
+\BCBL {}\ \BBA {} Beheshti, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Combining techniques to refine item to skills Q-matrices
+  with a partition tree} {Combining techniques to refine item to skills
+  q-matrices with a partition tree}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Educational Data Mining 2015.} {Educational data mining
+  2015.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Galbraith%
+, Moustaki%
+, Bartholomew%
+\BCBL {}\ \BBA {} Steele%
+}{%
+Galbraith%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2002}}%
+}]{%
+galbraith2002analysis}
+\APACinsertmetastar {%
+galbraith2002analysis}%
+\begin{APACrefauthors}%
+Galbraith, J.%
+, Moustaki, I.%
+, Bartholomew, D\BPBI J.%
+\BCBL {}\ \BBA {} Steele, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2002}.
+\newblock
+\APACrefbtitle {The analysis and interpretation of multivariate data for social
+  scientists} {The analysis and interpretation of multivariate data for social
+  scientists}.
+\newblock
+\APACaddressPublisher{}{CRC Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Geerts%
+, Goethals%
+\BCBL {}\ \BBA {} Mielik{\"a}inen%
+}{%
+Geerts%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2004}}%
+}]{%
+geerts2004tiling}
+\APACinsertmetastar {%
+geerts2004tiling}%
+\begin{APACrefauthors}%
+Geerts, F.%
+, Goethals, B.%
+\BCBL {}\ \BBA {} Mielik{\"a}inen, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Tiling databases} {Tiling databases}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Discovery science} {Discovery science}\ (\BPGS\
+  278--289).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Grigorios~Tsoumakas%
+}{%
+Grigorios~Tsoumakas%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+Tsoumakas2010MLD}
+\APACinsertmetastar {%
+Tsoumakas2010MLD}%
+\begin{APACrefauthors}%
+Grigorios~Tsoumakas, I\BPBI V., Ioannis~Katakis.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2010}.
+\newblock
+\APACrefbtitle {Data Mining and Knowledge Discovery Handbook} {Data mining and
+  knowledge discovery handbook}.
+\newblock
+\APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Haertel%
+}{%
+Haertel%
+}{%
+{\protect \APACyear {1989}}%
+}]{%
+haertel1989using}
+\APACinsertmetastar {%
+haertel1989using}%
+\begin{APACrefauthors}%
+Haertel, E\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1989}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Using restricted latent class models to map the skill
+  structure of achievement items} {Using restricted latent class models to map
+  the skill structure of achievement items}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Educational Measurement}{}{}{301--321}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Henson%
+, Templin%
+\BCBL {}\ \BBA {} Willse%
+}{%
+Henson%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+henson2009defining}
+\APACinsertmetastar {%
+henson2009defining}%
+\begin{APACrefauthors}%
+Henson, R\BPBI A.%
+, Templin, J\BPBI L.%
+\BCBL {}\ \BBA {} Willse, J\BPBI T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Defining a family of cognitive diagnosis models using
+  log-linear models with latent variables} {Defining a family of cognitive
+  diagnosis models using log-linear models with latent variables}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{74}{2}{191--210}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Koren%
+, Bell%
+\BCBL {}\ \BBA {} Volinsky%
+}{%
+Koren%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+koren2009matrix}
+\APACinsertmetastar {%
+koren2009matrix}%
+\begin{APACrefauthors}%
+Koren, Y.%
+, Bell, R.%
+\BCBL {}\ \BBA {} Volinsky, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Matrix factorization techniques for recommender systems}
+  {Matrix factorization techniques for recommender systems}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Computer}{}{8}{30--37}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lee%
+\ \BBA {} Seung%
+}{%
+Lee%
+\ \BBA {} Seung%
+}{%
+{\protect \APACyear {1999}}%
+}]{%
+lee1999learning}
+\APACinsertmetastar {%
+lee1999learning}%
+\begin{APACrefauthors}%
+Lee, D\BPBI D.%
+\BCBT {}\ \BBA {} Seung, H\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1999}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning the parts of objects by non-negative matrix
+  factorization} {Learning the parts of objects by non-negative matrix
+  factorization}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature}{401}{6755}{788--791}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lee%
+\ \BBA {} Seung%
+}{%
+Lee%
+\ \BBA {} Seung%
+}{%
+{\protect \APACyear {2001}}%
+}]{%
+lee2001algorithms}
+\APACinsertmetastar {%
+lee2001algorithms}%
+\begin{APACrefauthors}%
+Lee, D\BPBI D.%
+\BCBT {}\ \BBA {} Seung, H\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2001}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Algorithms for non-negative matrix factorization}
+  {Algorithms for non-negative matrix factorization}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Advances in neural information processing systems}
+  {Advances in neural information processing systems}\ (\BPGS\ 556--562).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Madison%
+\ \BBA {} Bradshaw%
+}{%
+Madison%
+\ \BBA {} Bradshaw%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+madison2015effects}
+\APACinsertmetastar {%
+madison2015effects}%
+\begin{APACrefauthors}%
+Madison, M\BPBI J.%
+\BCBT {}\ \BBA {} Bradshaw, L\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Effects of Q-Matrix Design on Classification
+  Accuracy in the Log-Linear Cognitive Diagnosis Model} {The effects of
+  q-matrix design on classification accuracy in the log-linear cognitive
+  diagnosis model}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Educational and Psychological
+  Measurement}{75}{3}{491--511}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Maris%
+}{%
+Maris%
+}{%
+{\protect \APACyear {1995}}%
+}]{%
+maris1995psychometric}
+\APACinsertmetastar {%
+maris1995psychometric}%
+\begin{APACrefauthors}%
+Maris, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1995}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Psychometric latent response models} {Psychometric
+  latent response models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{60}{4}{523--547}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Maris%
+}{%
+Maris%
+}{%
+{\protect \APACyear {1999}}%
+}]{%
+maris1999estimating}
+\APACinsertmetastar {%
+maris1999estimating}%
+\begin{APACrefauthors}%
+Maris, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1999}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Estimating multiple classification latent class models}
+  {Estimating multiple classification latent class models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{64}{2}{187--212}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Miettinen%
+}{%
+Miettinen%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+miettinen2008positive}
+\APACinsertmetastar {%
+miettinen2008positive}%
+\begin{APACrefauthors}%
+Miettinen, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On the positive--negative partial set cover problem} {On
+  the positive--negative partial set cover problem}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Information Processing Letters}{108}{4}{219--221}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Miettinen%
+, Mielikainen%
+, Gionis%
+, Das%
+\BCBL {}\ \BBA {} Mannila%
+}{%
+Miettinen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2008}}%
+}]{%
+miettinen2008discrete}
+\APACinsertmetastar {%
+miettinen2008discrete}%
+\begin{APACrefauthors}%
+Miettinen, P.%
+, Mielikainen, T.%
+, Gionis, A.%
+, Das, G.%
+\BCBL {}\ \BBA {} Mannila, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The discrete basis problem} {The discrete basis
+  problem}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Knowledge and Data Engineering, IEEE Transactions
+  on}{20}{10}{1348--1362}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nau%
+, Markowsky%
+, Woodbury%
+\BCBL {}\ \BBA {} Amos%
+}{%
+Nau%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1978}}%
+}]{%
+nau1978mathematical}
+\APACinsertmetastar {%
+nau1978mathematical}%
+\begin{APACrefauthors}%
+Nau, D\BPBI S.%
+, Markowsky, G.%
+, Woodbury, M\BPBI A.%
+\BCBL {}\ \BBA {} Amos, D\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1978}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A mathematical analysis of human leukocyte antigen
+  serology} {A mathematical analysis of human leukocyte antigen
+  serology}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Mathematical Biosciences}{40}{3}{243--270}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Read%
+, Pfahringer%
+, Holmes%
+\BCBL {}\ \BBA {} Frank%
+}{%
+Read%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+read2011classifier}
+\APACinsertmetastar {%
+read2011classifier}%
+\begin{APACrefauthors}%
+Read, J.%
+, Pfahringer, B.%
+, Holmes, G.%
+\BCBL {}\ \BBA {} Frank, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Classifier chains for multi-label classification}
+  {Classifier chains for multi-label classification}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Machine learning}{85}{3}{333--359}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Robitzsch%
+, Kiefer%
+, George%
+\BCBL {}\ \BBA {} Uenlue%
+}{%
+Robitzsch%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+CDM}
+\APACinsertmetastar {%
+CDM}%
+\begin{APACrefauthors}%
+Robitzsch, A.%
+, Kiefer, T.%
+, George, A\BPBI C.%
+\BCBL {}\ \BBA {} Uenlue, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {CDM: Cognitive Diagnosis Modeling} {Cdm: Cognitive
+  diagnosis modeling}{\BBCQ}\ [\bibcomputersoftwaremanual].
+\newblock
+\begin{APACrefURL} \url{http://CRAN.R-project.org/package=CDM} \end{APACrefURL}
+\newblock
+\APACrefnote{R package version 4.5-0}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+A.~Rupp%
+}{%
+A.~Rupp%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+rupp2007answer}
+\APACinsertmetastar {%
+rupp2007answer}%
+\begin{APACrefauthors}%
+Rupp, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The answer is in the question: A guide for investigating
+  the theoretical potentials and practical limitations of cognitive
+  psychometric models} {The answer is in the question: A guide for
+  investigating the theoretical potentials and practical limitations of
+  cognitive psychometric models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International Journal of Testing}{7}{}{95--125}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+A\BPBI A.~Rupp%
+\ \BBA {} Mislevy%
+}{%
+A\BPBI A.~Rupp%
+\ \BBA {} Mislevy%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+rupp2007cognitive}
+\APACinsertmetastar {%
+rupp2007cognitive}%
+\begin{APACrefauthors}%
+Rupp, A\BPBI A.%
+\BCBT {}\ \BBA {} Mislevy, R\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Cognitive foundations of structured item response
+  models} {Cognitive foundations of structured item response models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognitive diagnostic assessment for education: Theories
+  and applications}{}{}{205--240}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+A\BPBI A.~Rupp%
+\ \BBA {} Templin%
+}{%
+A\BPBI A.~Rupp%
+\ \BBA {} Templin%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+rupp2008effects}
+\APACinsertmetastar {%
+rupp2008effects}%
+\begin{APACrefauthors}%
+Rupp, A\BPBI A.%
+\BCBT {}\ \BBA {} Templin, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The effects of Q-matrix misspecification on parameter
+  estimates and classification accuracy in the DINA model} {The effects of
+  q-matrix misspecification on parameter estimates and classification accuracy
+  in the dina model}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Educational and Psychological
+  Measurement}{68}{1}{78--96}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tatsuoka%
+}{%
+Tatsuoka%
+}{%
+{\protect \APACyear {1983}}%
+}]{%
+tatsuoka1983rule}
+\APACinsertmetastar {%
+tatsuoka1983rule}%
+\begin{APACrefauthors}%
+Tatsuoka, K\BPBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1983}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Rule space: An approach for dealing with misconceptions
+  based on item response theory} {Rule space: An approach for dealing with
+  misconceptions based on item response theory}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of educational measurement}{20}{4}{345--354}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+J.~Templin%
+, Henson%
+\BCBL {}\ \protect \BOthers {.}}{%
+J.~Templin%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+templin2010diagnostic}
+\APACinsertmetastar {%
+templin2010diagnostic}%
+\begin{APACrefauthors}%
+Templin, J.%
+, Henson, R\BPBI A.%
+\BCBL {}\ \BOthersPeriod {.}\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2010}.
+\newblock
+\APACrefbtitle {Diagnostic measurement: Theory, methods, and applications}
+  {Diagnostic measurement: Theory, methods, and applications}.
+\newblock
+\APACaddressPublisher{}{Guilford Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+J\BPBI L.~Templin%
+\ \BBA {} Henson%
+}{%
+J\BPBI L.~Templin%
+\ \BBA {} Henson%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+templin2006measurement}
+\APACinsertmetastar {%
+templin2006measurement}%
+\begin{APACrefauthors}%
+Templin, J\BPBI L.%
+\BCBT {}\ \BBA {} Henson, R\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Measurement of psychological disorders using cognitive
+  diagnosis models.} {Measurement of psychological disorders using cognitive
+  diagnosis models.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological methods}{11}{3}{287}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tsoumakas%
+, Katakis%
+\BCBL {}\ \BBA {} Vlahavas%
+}{%
+Tsoumakas%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+Tsoumakas2011random}
+\APACinsertmetastar {%
+Tsoumakas2011random}%
+\begin{APACrefauthors}%
+Tsoumakas, G.%
+, Katakis, I.%
+\BCBL {}\ \BBA {} Vlahavas, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Random k-Labelsets for Multi-Label Classification}
+  {Random k-labelsets for multi-label classification}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Transactions on Knowledge and Data
+  Engineering}{23}{7}{1079-1089}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wang%
+\ \BBA {} Douglas%
+}{%
+Wang%
+\ \BBA {} Douglas%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+wang2015consistency}
+\APACinsertmetastar {%
+wang2015consistency}%
+\begin{APACrefauthors}%
+Wang, S.%
+\BCBT {}\ \BBA {} Douglas, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Consistency of Nonparametric Classification in Cognitive
+  Diagnosis} {Consistency of nonparametric classification in cognitive
+  diagnosis}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychometrika}{80}{1}{85--100}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Xu%
+\ \BBA {} Davier%
+}{%
+Xu%
+\ \BBA {} Davier%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+xu2008fitting}
+\APACinsertmetastar {%
+xu2008fitting}%
+\begin{APACrefauthors}%
+Xu, X.%
+\BCBT {}\ \BBA {} Davier, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Fitting the structured general diagnostic model to NAEP
+  data} {Fitting the structured general diagnostic model to naep data}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{ETS Research Report Series}{2008}{1}{i--18}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
