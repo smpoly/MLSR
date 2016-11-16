@@ -64,8 +64,7 @@ mappings of tasks to skill(Q-matrix).Q-matrix refinement plays an important role
 	\item{Refine education theory}
 \end{itemize}
 
-  Validating Q-matrix can be seen as improving the domain model statistically. As we mentioned above, Q-matrix, whether we define skills behind tasks, or vice versa, tasks for a given set of skills, it is non trivial and error prone processes.Therefore, tools to help a tutor, or a designer of a learning environment, validate a given mapping of skills to tasks statistically would be highly valuable. Let us refer to this endeavour as the problem of Q-matrix refinement, where the Q-matrix represents the mapping of tasks to
-skills
+  Validating Q-matrix can be seen as improving the domain model statistically. As we mentioned above, Q-matrix, whether we define skills behind tasks, or vice versa, tasks for a given set of skills, it is non trivial and error prone processes.Therefore, tools to help a tutor, or a designer of a learning environment, validate a given mapping of skills to tasks statistically would be highly valuable. Let us refer to this endeavour as the problem of Q-matrix refinement, where the Q-matrix represents the mapping of tasks to skills.
 
 \subsection{Models}
 A number of models for student performance accessment consists of  a student profile matrix and a Q-matrix, that come from psychometrics and able to provide feedback to students' learning progress, these are called Diagnostic Classification Models (DCM) \cite{templin2010diagnostic}. Compared to traditional multi-dimensinal item response therory with continous latent attributes, DCM apply discret scale in latent attributes. These attribute pattern are binary vector with 1 indicating  mastery of that latent attriubtes and 0 otherwise. These latent pattern provide the knowledge feedback of student to teachears for helping with designing their remedial instruction. Alternatively, they are also called Cognitive Diagnosis Models \cite{templin2006measurement}, Cognitive Psychometric Models \cite{rupp2007answer}, Latent Response Models \cite{maris1995psychometric}, Restricted Latent Class Models \cite{haertel1989using}, Multiple Classification Latent Class Models \cite{maris1999estimating}, Structured Located Latent Class Models \cite{xu2008fitting}, Structured Item Response Models \cite{rupp2007cognitive}.These models are relatively similar. In this proposal, we will use the term Diagnostic Classification Models (DCMs) to embrace the whole family.
@@ -82,7 +81,7 @@ Generally,we can assumed DCMs belong to Latent Variable Models (LVM). For LVM, t
 \end{tabular}
 \\
 
-In DCMs, only models with manifest variables and latent discrete variables are considered, that is, statistically they belong to Latent Class Analysis (LCA). A varities of DCMs has been proposed over the past decade. DCMs can be classified into two categories, non-compensatory and compensatory, depending on the nature of the models. Noncompensatory DCM models presume that each item requires a particular set of skills and lacking any one of them would make the student fail to answer it correctly. This kind of models are also called deterministic-input noisy-and (DINA) model\cite{de2009dina}. In contrast, there is well-known compensatory analogues are the deterministic input, noisy-or-gate (DINO)\cite{templin2006measurement}, where skills in models are not decisive but they each contribute to the chances of success. Generalizing DCMs can be done by combing all these models, for instance,  generalized DINA models (G-DINA) \cite{de2011generalized}
+In DCMs, only models with manifest variables and latent discrete variables are considered, that is, statistically they belong to Latent Class Analysis (LCA). A varities of DCMs has been proposed over the past decade. DCMs can be classified into two categories, non-compensatory and compensatory, depending on the nature of the models. Noncompensatory DCM models presume that each item requires a particular set of skills and lacking any one of them would make the student fail to answer it correctly. This kind of models are also called deterministic-input noisy-and (DINA) model\cite{de2009dina}. In contrast, there is well-known compensatory analogues are the deterministic input, noisy-or-gate (DINO)\cite{templin2006measurement}, where skills in models are not decisive but they each contribute to the chances of success. Generalizing DCMs can be done by combing all these models, for instance,  generalized DINA models (G-DINA) \cite{de2011generalized}. Regardless of their foumulation, all these above models share the general idea of relating each item to single tor multiple latent attributes,we called Q-matrix.
 \subsubsection{Compensatory model}
 
  In compensatory DCMs, the lack of a some attribute can be
@@ -222,7 +221,7 @@ where $\xi_{ll'}=\prod_{k=1}^{K}\alpha_{l'k}^{\alpha_{lk}}$ for $K$ total number
 that is, maximizing the difference is equivalent to minimize the sum of the slip and guess parameters. A natural idea is to test all q-vectors to find the maximum $\delta_{jl}$ but that is computationally expensive. \cite{de2008empirically} proposed a greedy algorithm that adding skills into q-vector sequentially. First, $\delta_{jl}$ is calculated for all q-vectors which contains only one skill and the one with biggest $\delta_{jl}$ is chosen. Then, $\delta_{jl}$ is calculated for all q-vectors which contains two skills including the previously chosen one. Again the q-vector with biggest $\delta_{jl}$ is chosen. This whole process is repeated until no adding skills increases $\delta_{jl}$. However, this algorithm requires knowing $s_j$ and $g_j$ in advance. For real data, they are calculated by EM (Expectation Maximization) algorithm\cite{de2009dina}.  
 
 \subsection{Matrix Factorization}
-Matrix Factorization(MF) is a commonly used technique in Data Mining. The Netflix award-winning algorithm for recommender system is based on matrix factorization\cite{koren2009matrix}. In fact, there is a similarity between the Netflix Data and our item response data. They are both categorical but the Netflix data is scaled between 1 to 5 while the item response data is binary in most cases. The Netflix data is a huge sparse data while the item response data is usually complete. However, the purpose for mining these two datasets are different. For the Netflix data we want to make predictions on unobserved data and give recommendations to users based these predictions while for the item response data we want to find right Q-matrix and profile matrix. Nevertheless, MF is still useful in Q-matrix validation\cite{desmarais2014refinement}. 
+Matrix Factorization(MF) is a commonly used technique in Data Mining. The Netflix award-winning algorithm for recommender system is based on matrix factorization\cite{koren2009matrix,desmarais2013matrix,desmarais2015combining}. In fact, there is a similarity between the Netflix Data and our item response data. They are both categorical but the Netflix data is scaled between 1 to 5 while the item response data is binary in most cases. The Netflix data is a huge sparse data while the item response data is usually complete. However, the purpose for mining these two datasets are different. For the Netflix data we want to make predictions on unobserved data and give recommendations to users based these predictions while for the item response data we want to find right Q-matrix and profile matrix. Nevertheless, MF is still useful in Q-matrix validation\cite{desmarais2014refinement}. 
 
 \parskip = \baselineskip
 Since the influential paper on the applications of NMF in pattern  recognition\cite{lee1999learning}, researchers began to apply this useful techniques in other fields. The use of NMF in EDM can be found in\cite{desmarais2012mapping}.
@@ -239,7 +238,7 @@ where $Q$ is a real matrix, positive matrix and binary matrix respectively for M
 
 \section{Proposed Method}
 
- Each of the three techniques: MinRSS, MaxDiff, and ALSC, apply a substantially different methods from the others to refine a Q-matrix. In that respect, their respective outcome from each method may be complementary, and we can hypothesize that they can be combined to provide a more reliable output than any single one. The main idea is optimize these outcomes from each unsupervised Q-matrix validation by supervised learning model that trained by huge amount of all possible Q-matrices. So we apply ensemble learning based on multi-label classification over each proposed q-vectors and predict more reliable q-vectors for Q-matrices. 
+ Each of the three techniques: MinRSS, MaxDiff, and ALSC, apply a substantially different methods from the others to refine a Q-matrix. In that respect, their respective outcome from each method may be complementary, and we can hypothesize that they can be combined to provide a more reliable output than any single one. The main idea is optimize these outcomes from each unsupervised Q-matrix validation by supervised learning model that trained by huge amount of all possible Q-matrices. Furthermore, some algorithms are more effective in general, but may not be the best performer in all context.  Defining the features that that allows learning which algorithm provides the most reliable outcome in a given context is another objective of combining these techniques. So we apply ensemble learning based on multi-label classification over each proposed q-vectors and predict more reliable q-vectors for Q-matrices. 
  
  \begin{figure}\label{fig:RP}
   \centering
@@ -320,6 +319,8 @@ In this experiment we use the single-label J48 classifier, an optimized  impleme
 
 \section{Empirical Study}
 
+ In this research, we are going to compare the our porposed methods with three data driven techniques\cite{chiu2013statistical,de2008empirically,de2009dina,desmarais2013matrix} in syntehtic data and also do comparison on methods applied with traditional classifiers (Classification Tree, Boosted Classification Tree, Regression Tree, Boosted Regression Tree) proposed in\cite{desmarais2015combining} in real data. We relied on the CDM \cite{CDM} and NPCD package which provided both the code for three basic data driven techniques and the data, rpart packages for traditional classification and mulan \cite{Tsoumakas2010MLD} for multi-label classification.
+ 
 \subsection{Data}
 For the sake of comparison, we use the same datasets as the ones used in Desmarais et al.\ (2015)~\cite{tatsuoka1983rule,desmarais2015combining}. It is a well known data set in
 fraction algebra from Tatsuoka's work (Tatsuoka, 1984)\cite{tatsuoka1983rule}. It consists 3 expert-driven Q-matrices and one SVD driven Q-matrix with a same data set.These allow us to analyze possibility of different models (Q-matrices) over the same data source.Table~\ref{tab:qm} provides the basic information and source of each dataset.   
@@ -466,13 +467,13 @@ As expected, the performance of all methods decline with the number of perturbat
 \begin{figure}
   \centering
     \includegraphics[width=100 mm ,scale=0.25]{graph/SA.pdf}
-  \caption{Real data: Logit value of Subset Accuracy as a function of the number of perturbations}\label{fig:SAforReal}
+  \caption{Real data: Logit value of Accuracy as a function of the number of perturbations}\label{fig:SAforReal}
 \end{figure}
 
 \begin{figure}
   \centering
     \includegraphics[width=100 mm ,scale=0.25]{graph/FM.pdf}
-    \caption{Real data: Logit value of Example-based F-measure as a function of the number of perturbations}\label{fig:FMforReal}
+    \caption{Real data: Logit value of F-measure as a function of the number of perturbations}\label{fig:FMforReal}
 \end{figure}
 
 
