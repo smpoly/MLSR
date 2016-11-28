@@ -39,6 +39,8 @@
 \usepackage{parskip}
 
     
+\addeditor{michel}
+
 \begin{document}
 
 \title{Refinement of Q-matrix with an ensemble learning}
@@ -46,17 +48,19 @@
 \maketitle
 \setlength{\parindent}{15pt}
 
+
+
 \begin{abstract}
 There are numerous algorithms and tools to help an expert map exercises and tasks to underlying skills. The last decade has witnessed a wealth of data driven approaches aiming to refine expert-defined
-mappings of tasks to skill(Q-matrix).Q-matrix refinement plays an important role in Educational Data Mining. In this proposal, we reviewed three well known methods for Q-matrix validation: MinRSS, MaxDiff and matrix factorization technique. A two steps refinement method is proposed to improve the performance on detection and correction of misspecified q-matrix. This method use three methods in first step and, then apply classification to provide more reliable q-vectors for Q-matrix in second step. Classifier will take the responsibilty to predict the more reliable q-vector by using q-vectors proposed from three data driven methods as featrues. This classifier is trained by huge amount permutated Q-matrices.Whereas most traditional classification algorithms are working at the level of individual mappings, we introduce an approach based on a multi-label classification algorithm that is trained on the mapping of a task to all skills simultaneously. A comparison of well known data driven approaches and proposed method were conducted in both synthetic data and real data. Simulation studies shown that outperform the existing task to skill mapping refinement techniques. 
+mappings of tasks to skill(Q-matrix).Q-matrix refinement plays an important role in Educational Data Mining. In this proposal, we reviewed three existing well known algorithms for Q-matrix validation: MinRSS, MaxDiff and matrix factorization technique, each apply different techniques and they are complementary each others.  So we are going to combine these three techniques to improve over the performance of existing refinement methods for the detection and correction of misspecified q-matrix. We proposed a two steps method for Q-matrix refinement. This method use three existing methods in first step and, then apply classification to provide more reliable q-vectors for Q-matrix in second step. Classifier will take the responsibility to predict the more reliable q-vector by using q-vectors proposed from three data driven methods as features. This classifier is trained by huge amount permutated Q-matrices.Whereas most traditional classification algorithms are working at the level of individual mappings, we introduce an approach based on a multi-label classification algorithm that is trained on the mapping of a task to all skills simultaneously. A comparison of well known data driven approaches and proposed method were conducted in both synthetic data and real data. Simulation studies shown that outperform the existing task to skill mapping refinement techniques.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-  Analyzing the student perfromance in Intelligent tugtoring system is mostly rely on both accessing the skills to perform tasks and what skills a student have. In the case of defining what these skills are, These can be deeply understanding of abstract, factual knowledge, problem solving ablilities, practice at recognizing problems, aptterns and situations etc. In designing the intelligent learning environment, it should be focused on particular subset of these skills to evaluate the student performance efficiently. Accessing these skills are non trivial and error prone process. In this proposal, we are going to discuss the Q-matrix  refinement, where Q-matrix is the mapping of skills required to perform tasks. Q-matrix validation has become a central problem in Educational Data Mining and E-learning since last decade. A Q-matrix, as proposed by Tatsuoka \cite{tatsuoka1983rule}, is a term commonly used in the literature of psychometrics and knowledge engineering. Typically, it is a binary matrix which shows a relationship between items and their required latent attributes. In learning analytic problem, items or tasks are questions proposed to students, and latent attributes are skills needed to answer these questions. Usually, Q-matrices are extracted by a human domain experts. Misspecifications in Q-matrix will result in erroneous diagnosis of students knowledge states \cite{rupp2008effects,madison2015effects}. Therefore, validating a Q-matrix would be highly useful and important in providing accurate and effective accesing and predicting of student performance. 
+  Analyzing the student performance in Intelligent tutoring system is mostly rely on both accessing the skills to perform tasks and what skills a student have. In the case of defining what these skills are, These can be deeply understanding of abstract, factual knowledge, problem solving abilities, practice at recognizing problems, patterns and situations etc. In designing the intelligent learning environment, it should be focused on particular subset of these skills to evaluate the student performance efficiently. Accessing these skills are non trivial and error prone process. In this proposal, we are going to discuss the Q-matrix  refinement, where Q-matrix is the mapping of skills required to perform tasks. Q-matrix validation has become a central problem in Educational Data Mining and E-learning since last decade. A Q-matrix, as proposed by Tatsuoka \cite{tatsuoka1983rule}, is a term commonly used in the literature of psychometrics and knowledge engineering. Typically, it is a binary matrix which shows a relationship between items and their required latent attributes. In learning analytic problem, items or tasks are questions proposed to students, and latent attributes are skills needed to answer these questions. Usually, Q-matrices are extracted by a human domain experts. Misspecification in Q-matrix will result in erroneous diagnosis of students knowledge states \cite{rupp2008effects,madison2015effects}. Therefore, validating a Q-matrix would be highly useful and important in providing accurate and effective accesing and predicting of student performance. 
 	\subsection{Q-matrix in EDM}
- EDM (Educational Data Mining) is the effectively usage of data mining, machine learning and statistics techniques in data from educational field to provide the better solution in analysis of student knowledge and behaviour to the designer of learning enviorment. The main sources of these data come from real school teaching activities and online tutoring systems. For EDM, typical applications are \cite{baker2009state}: 
+ EDM (Educational Data Mining) is the effectively usage of data mining, machine learning and statistics techniques in data from educational field to provide the better solution in analysis of student knowledge and behavior to the designer of learning environment. The main sources of these data come from real school teaching activities and online tutoring systems. For EDM, typical applications are \cite{baker2009state}: 
 \begin{itemize}
 	\item{Improve student model}
 	\item{Improve domain model}
@@ -64,10 +68,10 @@ mappings of tasks to skill(Q-matrix).Q-matrix refinement plays an important role
 	\item{Refine education theory}
 \end{itemize}
 
-  Validating Q-matrix can be seen as improving the domain model statistically. As we mentioned above, Q-matrix, whether we define skills behind tasks, or vice versa, tasks for a given set of skills, it is non trivial and error prone processes.Therefore, tools to help a tutor, or a designer of a learning environment, validate a given mapping of skills to tasks statistically would be highly valuable. Let us refer to this endeavour as the problem of Q-matrix refinement, where the Q-matrix represents the mapping of tasks to skills.
+  Validating Q-matrix can be seen as improving the domain model statistically. As we mentioned above, Q-matrix, whether we define skills behind tasks, or vice versa, tasks for a given set of skills, it is non trivial and error prone processes.Therefore, tools to help a tutor, or a designer of a learning environment, validate a given mapping of skills to tasks statistically would be highly valuable. Let us refer to this endeavor as the problem of Q-matrix refinement, where the Q-matrix represents the mapping of tasks to skills.
 
 \subsection{Models}
-A number of models for student performance accessment consists of  a student profile matrix and a Q-matrix, that come from psychometrics and able to provide feedback to students' learning progress, these are called Diagnostic Classification Models (DCM) \cite{templin2010diagnostic}. Compared to traditional multi-dimensinal item response therory with continous latent attributes, DCM apply discret scale in latent attributes. These attribute pattern are binary vector with 1 indicating  mastery of that latent attriubtes and 0 otherwise. These latent pattern provide the knowledge feedback of student to teachears for helping with designing their remedial instruction. Alternatively, they are also called Cognitive Diagnosis Models \cite{templin2006measurement}, Cognitive Psychometric Models \cite{rupp2007answer}, Latent Response Models \cite{maris1995psychometric}, Restricted Latent Class Models \cite{haertel1989using}, Multiple Classification Latent Class Models \cite{maris1999estimating}, Structured Located Latent Class Models \cite{xu2008fitting}, Structured Item Response Models \cite{rupp2007cognitive}.These models are relatively similar. In this proposal, we will use the term Diagnostic Classification Models (DCMs) to embrace the whole family.
+A number of models for student performance assessment consists of  a student profile matrix and a Q-matrix, that come from psychometrics and able to provide feedback to students' learning progress, these are called Diagnostic Classification Models (DCM) \cite{templin2010diagnostic}. Compared to traditional dimensional item response theory with continuous latent attributes, DCM apply discret scale in latent attributes. These attribute pattern are binary vector with 1 indicating  mastery of that latent attributes and 0 otherwise. These latent pattern provide the knowledge feedback of student to teachers for helping with designing their remedial instruction. Alternatively, they are also called Cognitive Diagnosis Models \cite{templin2006measurement}, Cognitive Psychometric Models \cite{rupp2007answer}, Latent Response Models \cite{maris1995psychometric}, Restricted Latent Class Models \cite{haertel1989using}, Multiple Classification Latent Class Models \cite{maris1999estimating}, Structured Located Latent Class Models \cite{xu2008fitting}, Structured Item Response Models \cite{rupp2007cognitive}.These models are relatively similar. In this proposal, we will use the term Diagnostic Classification Models (DCMs) to embrace the whole family.
 
 \parskip = \baselineskip
 Generally,we can assumed DCMs belong to Latent Variable Models (LVM). For LVM, there are only two type of variables, the manifest variable (Observed variable) and latent variable (Unobserved variable). Based on whether it is continuous or discrete, LVM can be divided into four categories \cite{galbraith2002analysis}.
@@ -81,7 +85,7 @@ Generally,we can assumed DCMs belong to Latent Variable Models (LVM). For LVM, t
 \end{tabular}
 \\
 
-In DCMs, only models with manifest variables and latent discrete variables are considered, that is, statistically they belong to Latent Class Analysis (LCA). A varities of DCMs has been proposed over the past decade. DCMs can be classified into two categories, non-compensatory and compensatory, depending on the nature of the models. Noncompensatory DCM models presume that each item requires a particular set of skills and lacking any one of them would make the student fail to answer it correctly. This kind of models are also called deterministic-input noisy-and (DINA) model\cite{de2009dina}. In contrast, there is well-known compensatory analogues are the deterministic input, noisy-or-gate (DINO)\cite{templin2006measurement}, where skills in models are not decisive but they each contribute to the chances of success. Generalizing DCMs can be done by combing all these models, for instance,  generalized DINA models (G-DINA) \cite{de2011generalized}. Regardless of their foumulation, all these above models share the general idea of relating each item to single tor multiple latent attributes,we called Q-matrix.
+In DCMs, only models with manifest variables and latent discrete variables are considered, that is, statistically they belong to Latent Class Analysis (LCA). A varieties of DCMs has been proposed over the past decade. DCMs can be classified into two categories, non-compensatory and compensatory, depending on the nature of the models. Non-compensatory DCM models presume that each item requires a particular set of skills and lacking any one of them would make the student fail to answer it correctly. This kind of models are also called deterministic-input noisy-and (DINA) model\cite{de2009dina}. In contrast, there is well-known compensatory analogues are the deterministic input, noisy-or-gate (DINO)\cite{templin2006measurement}, where skills in models are not decisive but they each contribute to the chances of success. Generalizing DCMs can be done by combing all these models, for instance,  generalized DINA models (G-DINA) \cite{de2011generalized}. Regardless of their formulation, all these above models share the general idea of relating each item to single tor multiple latent attributes,we called Q-matrix.
 \subsubsection{Compensatory model}
 
  In compensatory DCMs, the lack of a some attribute can be
@@ -91,7 +95,7 @@ For example, in a real study to access the prevalence of pathological gambling \
 situation." which may require the presence of two attributes as follows:
 \begin{itemize}
 	\item[attribute1:] brokes the legal law such as forgery, fraud, theft, or embezzlement to finance gambling.
-	\item[attriubte2:] depends on money provided by others to relieve a desdperate situation caused by gambling.	
+	\item[attriubte2:] depends on money provided by others to relieve a desiderata situation caused by gambling.	
 \end{itemize}
 
  
@@ -280,20 +284,23 @@ The rightmost column contain the true labels.
 
 
 
+we look for the most likely q-vector classes for training model by counting the frequencies of q-vectors proposed from three data driven techniques in real data. We choose q-vectors with frequencies larger than certain percentage(for eg. we used 5\% in this experiment). Only those most likely q-vectors are considered as classes in synthetic data for training model of multi-label classifiers .This is the most important step of this experiment.
 
-\begin{figure}
-  \centering
-    \includegraphics[width=100mm ,scale=0.5]{graph/DG.pdf}
-  \caption{Data Generation Procedure of each Q-Matrix~$QM_i$}  \label{fig:DG}
-\end{figure}
 
- we look for the most likely q-vector classes for training model by counting the frequencies of q-vectors proposed from three data driven techniques in real data. We choose q-vectors with frequencies larger than certain percentage(for eg. we used 5\% in this experiment). Only those most likely q-vectors are considered as classes in synthetic data for training model of multi-label classifiers .This is the most important step of this experiment.  
+  The idea of data selection is about proposed vectors poll from three data driven methods would provide some prevision about what are the more likely q-vectors for true Q-matrix. In synthetic data, we have all possible combination of skills for q-vectors in permutated Q-matrices. Synthteic data contain more q-vectors than those in true QM. In real situation, we are not supposed to know what q-vectors are in true QM. So we tried to guess what are the most likely q-vectors classes form the poll, that contains proposed output from three data driven techniques. Only those q-vectors classes are considered in model training of classifiers. As a result, it reduce both time and computational complexities, that might occured when we train with less likely q-vectors from permuatated Q-matrices.   
+
+\note{This procedure goes beyond transformation and preprocessing. It applies a data selection rule and the contribution of this procedure to improve performance should be measured by itself.}
+
+\note{How about a tentative explanation of where this the idea of data case selection comes from and why it would give better results?}
+
 
 \subsection{muti-label skills refinement algorithms}
 
 The generality of multi-label problems makes it significantly more complex to solve than traditional single-label (two-class or multi-class) problems. Only a few studies on multi-label learning are reported in the literature, which mainly concern the problems of text categorization, bioinformatics and scene classification. 
 
 Multi-label classification aims to predict a whole vector of labels at once, namely the item skills set in our case. We have a vector of skills for each item in our Q-matrices. So we can transform the proposed outputs of Q-matrices driven from the three refinement techniques into multi-label classification problem and then we make final prediction by using those features. In this study, we use two multi-label classification methods: binary relevance method (Classifier chain method)~\cite{read2011classifier} by using Naive Bayes classifier, and RAndom k-labELsets(Ensemble method) \cite{Tsoumakas2011random} by using the J48 decision tree algorithm.
+
+\note{The number of multi-label class values explode with the number of label dimensions.  This raises the question of scaling over many labels.}
 
 \subsubsection{Binary Relevance method with Naive Bayes}
 The strategy of problem transformation is to use the one-against-all strategy by converting the multi-label problem into several binary classification problems. This approach is known as the binary relevance method (BR)~\cite{read2011classifier}. A method closely related to the BR method is the Classifier Chain method (CC) proposed by Read et al. \cite{read2011classifier}. This method involves~$Q$ binary classifiers linked along a chain. BR transforms any multi-label problem into one binary problem for each label. 
@@ -309,17 +316,48 @@ given the features augmented with all previous class labels in the chain, $ C_1;
 P(l_i)= \arg \max_{l_i} P(l_i|X,l_1,l_2,...,l_{i-1}) 
 \end{equation}
 
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=8cm]{graph/BR.pdf}
+  \caption{An example of the classification process of Binary Relevarnce method}\label{fig:BR}
+\end{figure}
+
+  Figure \ref{fig:BR} show how the BR method work in its classification. The chain of classifers are builded and each classifer are related to their previous classifers. Output from previous classifers are also take into account as features in current classification. So, the correlation between each label (or skill) are also considered in classification.    
+ %\includegraphics[width=\textwidth,height=5cm,keepaspectratio]{graph/BR.pdf}
+
 \subsubsection{RAndom k-labELsets with J48}
-The ensemble methods for multi-label learning are developed on top of the common problem transformation or algorithm adaptation methods. The most well known problem transformation ensembles are the RAndom k-labELsets (RAkEL) system by Tsoumakas et al.~\cite{Tsoumakas2011random}. RAkEL constructs each base classifier by considering a small random subset of labels .It decompose all labels $L$ into $m$ random subsets of labels
-with size $k$ and trains a label power-set classifier
-using each set of labels. By using a simple voting process,it  determines the
-final set of labels for a given example. In this way, the proposed algorithm aims to take into account label correlations using single-label classifiers that are applied on subtasks with a manageable number of labels and adequate number of examples per label. \\
+The ensemble methods for multi-label learning are developed on top of the common problem transformation or algorithm adaptation methods. The most well known problem transformation ensembles are the RAndom k-labELsets (RAkEL) system by Tsoumakas et al.~\cite{Tsoumakas2011random}. RAkEL constructs each base classifier by considering a small random subset of labels .It decompose all labels $L$  with size $k$ into $m$ random subsets of labels set and trains a label power-set classifier
+using each set of labels. Let the term $L^k$ denote the set of all distinct k-labelsets of $L$.
+The size of $L^k$ is given by the binomial coefficient:$|L^k| =(^i_k)$. Given a size of labelsets $k$ over set of $i$ labels and a number of desired classifiers $m ≤ |L^k|$, RAkEL initially selects $m$ k-labelsets $R_j , j = 1 . . . m$ from the set $L^k$ via random sampling without replacement.  Then RAkEL learns m multi-label classifiers $C_j , j = 1 . . . m$ using LP. For the prediction, each classifier provides binary predictions for each label set. Subsequently,It  determines the final set of labels for a given example by using a simple voting process. It calculates the mean of these predictions for labels 
+from each classifier $C$ and outputs a final positive decision if it is greater than a 0.5 threshold. This intuitive threshold corresponds to the majority voting rule for the fusion of classifier decisions. It has been used for deriving a final decision in the problem transformation methods. The classification
+process of RAkEL is given in Figure \ref{fig:RAKEL}, with user-specified parameters:  k=2 (size of labelsets). In this way, the proposed algorithm aims to take into account label correlations using single-label classifiers that are applied on subtasks with a manageable number of labels and adequate number of examples per label. \\
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=8cm]{graph/RAKEL.pdf}
+  \caption{An example of the classification process of Random k-Labelsets method}\label{fig:RAKEL}
+\end{figure}
 
 In this experiment we use the single-label J48 classifier, an optimized  implementation of the  C4.5 or improved version of the  C4.5. J48 constructs a Decision tree as an output.  
 
+
+
+
+
+\note{Please expand the sections on RAkEL and Binary Relevance with more details and maybe examples.  They are at the heart of the proposal.}
+
 \section{Empirical Study}
 
- In this research, we are going to compare the our porposed methods with three data driven techniques\cite{chiu2013statistical,de2008empirically,de2009dina,desmarais2013matrix} in syntehtic data and also do comparison on methods applied with traditional classifiers (Classification Tree, Boosted Classification Tree, Regression Tree, Boosted Regression Tree) proposed in\cite{desmarais2015combining} in real data. We relied on the CDM \cite{CDM} and NPCD package which provided both the code for three basic data driven techniques and the data, rpart packages for traditional classification and mulan \cite{Tsoumakas2010MLD} for multi-label classification.
+ In this research, we are going to compare the our porposed methods with three data driven techniques\cite{chiu2013statistical,de2008empirically,de2009dina,desmarais2013matrix} in syntehtic data and also do comparison on methods applied with traditional classifiers (Classification Tree, Boosted Classification Tree, Regression Tree, Boosted Regression Tree) proposed in\cite{desmarais2015combining} in real data. We relied on the CDM \cite{CDM} and NPCD package which provided both the code for three basic data driven techniques and the data, rpart packages for traditional classification and mulan \cite{Tsoumakas2010MLD} for multi-label classification. 
+  
+ We use synthetic data generated from 1000 permuted matrices for training  and use real data for testing. The procedure for data generation of training and testing is shown in Figure~\ref{fig:DG}. The general idea is to introduce a perturbation in a Q-matrix and to run the refinement algorithms on the perturbed matrix to validate whether the perturbation is identified and whether false perturbations (false alarms) are introduced. Given that the Q-matrices to generate the synthetic data are known, this provide the ground truth to do the training.  Noise is introduced to make the data closer to real data and we use the original ratio of 0/1 in the perturbated matrix to create the 1000~permutations.  See~\cite{desmarais2015combining} for details.
+
+Next, we follow the same approach as in~\cite{desmarais2015combining}, but instead of using a decision tree to predict a single cell in a Q-matrix, a multi-label classification algorithm is used for the predicting all skills of an item at once. 
+\begin{figure}
+  \centering
+    \includegraphics[width=100mm ,scale=0.5]{graph/DG.pdf}
+  \caption{Data Generation Procedure of each Q-Matrix~$QM_i$}  \label{fig:DG}
+\end{figure}
  
 \subsection{Data}
 For the sake of comparison, we use the same datasets as the ones used in Desmarais et al.\ (2015)~\cite{tatsuoka1983rule,desmarais2015combining}. It is a well known data set in
@@ -394,13 +432,18 @@ The experimental results are reported in Tables [\ref{ref:Syn_HL},\ref{ref:Syn_S
 \begin {table}[h]
 \scriptsize
 \centering
-\begin{tabular}{c|c|c|c|c|c}	
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c}	
 	\hline\hline	
-QM & MinRSS & MaxDiff & ALSC & RAkEL & BR   \\ \hline
-qm1 & 0.01 & 0.02 & 0.01 & 0.00 & 0.00 \\
-qm2 & 0.02 & 0.04 & 0.06 & 0.01 & 0.01  \\
-qm3 & 0.00 & 0.02 & 0.01 & 0.00 & 0.00   \\
-qm4 & 0.01 & 0.02 & 0.01 & 0.00 & 0.01  \\  \hline\hline
+	
+	
+
+	
+QM  &  MinRSS  &  MaxDiff  &  ALSC  &  CT  &  BCT  &  RT  &  BRT  &  BR  &  RAkEL \\ \hline
+qm1  & 0.01 & 0.02 & 0.01 & 0.00 & 0.00 & 0.00 & 0.01 & 0.00 & 0.00 \\
+qm2  & 0.02 & 0.04 & 0.06 & 0.01 & 0.01 & 0.01 & 0.02 & 0.01 & 0.01 \\
+qm3  & 0.00 & 0.02 & 0.01 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+qm4  & 0.01 & 0.02 & 0.01 & 0.01 & 0.00 & 0.01 & 0.01 & 0.01 & 0.00 \\
+ \hline\hline
 \end{tabular}
 \caption {Hamming Loss result of Synthetic data (single perturbation)} \label{ref:Syn_HL} 
 \end{table}
@@ -411,16 +454,16 @@ qm4 & 0.01 & 0.02 & 0.01 & 0.00 & 0.01  \\  \hline\hline
 \begin {table}[h]
 \scriptsize
 \centering
-\begin{tabular}{c|c|c|c|c|c}	
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c}	
 	\hline\hline	
-QM  & MinRSS  & MaxDiff  & ALSC  & RAkEL & BR    \\  \hline
-qm1  & 0.98 & 0.95 & 0.97 & 0.99 & 0.99  \\
-qm2  & 0.90 & 0.83 & 0.72 & 0.97 & 0.94  \\
-qm3  & 0.99 & 0.96 & 0.99 & 1.00 & 1.00  \\
-qm4  & 0.98 &  0.94 & 0.98 & 0.99 & 0.98  \\
+QM & MinRSS & MaxDiff & ALSC & CT & BCT & RT & BRT & BR & RAkEL \\ \hline
+qm1 & 0.98 & 0.95 & 0.97 & 1.00 & 1.00 & 1.00 & 0.98 & 0.99 & 0.99 \\
+qm2 &0.90 & 0.83 &0.72 & 0.94 & 0.94 & 0.94 & 0.89 & 0.94 & 0.97 \\
+qm3 & 0.99 & 0.96 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 1.00 & 1.00  \\
+qm4 & 0.98 & 0.94 & 0.98 & 0.98 & 0.99 & 0.98 & 0.98 & 0.98 & 0.99	\\ 
 \hline\hline
 \end{tabular}
-\caption {SubSet Accuracy result of Synthetic data (single perturbation)} \label{ref:Syn_SA} 
+\caption {Accuracy result of Synthetic data (single perturbation)} \label{ref:Syn_SA} 
 \end{table}
 
 
@@ -428,33 +471,32 @@ qm4  & 0.98 &  0.94 & 0.98 & 0.99 & 0.98  \\
 \begin {table}[h]
 \scriptsize
 \centering
-\begin{tabular}{c|c|c|c|c|c}	
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c}	
 	\hline\hline	
- QM  &  MinRSS & MaxDiff  &  ALSC  &  RAkEL &  BR  \\ 
- qm1  & 0.99 & 0.98 & 0.99 & 1.00 & 1.00  \\  
- qm2  & 0.98 & 0.98 & 0.96 & 1.00 & 0.99  \\
- qm3  & 1.00 & 0.98 & 0.99 & 1.00 & 1.00  \\
- qm4  & 0.99 & 0.98 & 0.99 & 1.00 & 0.99  \\
+QM & MinRSS & MaxDiff & ALSC & CT & BCT & RT & BRT & BR & RAkEL \\ \hline
+qm1 & 0.99 & 0.98 & 0.99 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\
+qm2 & 0.98 & 0.98 & 0.96 & 0.99 & 0.99 & 0.99 & 0.98 & 0.99 & 1.00 \\
+qm3 & 1.00 & 0.98 & 0.99 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\
+qm4 & 0.99 & 0.98 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 1.00 \\
 \hline\hline
 \end{tabular}
-\caption {Macro averaged F-measure result of Synthetic data (single perturbation)} \label{ref:Syn_FM} 
+\caption {F-measure result of Synthetic data (single perturbation)} \label{ref:Syn_FM}
+\note{Because these numbers are very close to 1, they should be transformed on a logit scale.}
 \end{table}
 
 All experiments were done with 10 fold cross validation.
 
  
- For synthetic data, a single cell is perturbed. We can see from Tables [4,5,6]
-that most of multi-label skill refinement methods can recover 99\% for all
+ For synthetic data, a single cell is perturbed. We can see from Tables [\ref{ref:Syn_HL},\ref{ref:Syn_SA},\ref{ref:Syn_FM}] that most of multi-label skill refinement methods can recover 99\% for all
 Q-matrices and even the performance reaches 100\% in terms of accuracy
-and F-measure. The standard deviations of all values are less than 0.00, so we do not mention in here. Clearly, all methods using multi-label refinement algorithms perform much better than any single method and the results are also substantially better than those of the single-cell decision tree method reported in~\cite{desmarais2015combining}. It is more significant when q-vector contains more skills.(for eg., QM2 has 5 skills while others have only 3 skills. In this case, the porposed method singnificantly outperform than other methods). 
-
-
+and F-measure. The standard deviations of all values are less than 0.00, so we do not mention in here\note{not if a logit scale was used}. Clearly, all methods using multi-label refinement algorithms perform much better than any single method and the results are also substantially better than those of the single-cell decision tree method reported in~\cite{desmarais2015combining}. In our previous method, all skills are independently predicted by each classifer. In this method, we also consider correlation between skills. It provides more reliable q-vectors by taking relationship between skills into account in classification.\note{how do we konw that since for synthetic data it is not reported?  Furthermore, it does not seem that much better for real data results, and an explanation would be required to explain why the methods of this year's and last year's EDM papers, RT, etc., do not perorm better than the best of the 3 basic methods.}. Althoght all these methods in synthetic data got nearly close results, but it have significant different when q-vector contains more skills.(for eg., QM2 has 5 skills while others have only 3 skills. In this case, the porposed method singnificantly outperform than other methods).
+\note{I note that the methodology to perturbate and validate the Q-matrices is not explained, or did I miss it?}
 
 
 \subsection{Result for real data}
 For real data, multiple perturbations are introduced and the results are shown as figures to better visualize the trends as a function of the number of perturbations.   A logit scale is used which can be considered a good estimate of the relative remaining error on a scale of~$[0,1]$ (for eg., it displays a relative error reduction in accuracy from~0.90 to~0.95 as similar to the reduction from~0.99 to~0.995). The black lines show the results of the three individual refinement algorithms, and the coloured lines show the multi-label algorithms results.  
 
-As expected, the performance of all methods decline with the number of perturbations. The prposed methods show more significant performance than three data driven method along with the number of petubation. RAkEL shows the best performances for expert driven Q-matrices in general, but not that signifcant for SVD driven Q-matrix. However, the results for QM3 and QM4 shows that the MaxDiff method has better performance than proposed methods up to 3 or 4 pertubations, but proposed methods can recover the QMs more effectively and accurately when it contains more errors in those QMs.
+As expected, the performance of all methods decline with the number of perturbations. The prposed methods show more significant performance than three data driven method along with the number of petubation. RAkEL shows the best performances for expert driven Q-matrices in general, but not that signifcant for SVD driven Q-matrix. In QM2, RAkEL outperforms 67\% better than MaxDiff (best among three data driven algorithms) and 19\% better than BRT (best among compared methods except BR) in term of accuracy whent it reaches to 10 cells pertubation.   However, the results for QM3 and QM4 shows that the MaxDiff method has better performance than proposed methods up to 3 or 4 pertubations, but proposed methods can recover the QMs more effectively and accurately when it contains more errors in those QMs.
 
 
 
